@@ -9,13 +9,15 @@
 
 using namespace std;
 
+const int MAX = 0x7FFFFFFF;
+
 int main() {
     int n;
     cin >> n;
     vector<int> dp(n + 1);
     dp[1] = 1;
     for (int i = 2; i <= n; ++i) {
-        int m = dp[i - 1] + 1;
+        int m = MAX;
         for (int j = 1; j * j <= i; ++j) {
             m = min(m, dp[i - j * j] + 1);
         }
