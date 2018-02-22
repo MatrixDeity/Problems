@@ -1,7 +1,7 @@
 /**
     LeetCode_367
     https://leetcode.com/problems/valid-perfect-square/discuss/
-    MatrixDeity, 2017.
+    MatrixDeity, 2018.
 */
 
 #include <iostream>
@@ -11,8 +11,9 @@ using namespace std;
 
 class Solution {
 public:
+    using ll = long long;
     bool isPerfectSquare(int num) {
-        int a = num;
+        ll a = num;
         while (a * a > num) {
             a = (a + num / a) / 2;
         }
